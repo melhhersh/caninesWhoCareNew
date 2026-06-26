@@ -275,4 +275,60 @@
     });
   }
 
+  /* ── Smart mailto links ──
+     mailto: only works if the visitor has a default mail app. To make the
+     address always usable, every click also copies it to the clipboard and
+     shows a brief "Email copied" toast — the mailto still fires for those
+     who do have a mail app. */
+  const mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+  if (mailLinks.length) {
+    let toast;
+    function showToast(message) {
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.className = 'copy-toast';
+        toast.setAttribute('role', 'status');
+        document.body.appendChild(toast);
+      }
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toast._t);
+      toast._t = setTimeout(function () { toast.classList.remove('show'); }, 2600);
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text);
+      }
+      // Fallback for older / non-secure contexts
+      return new Promise(function (resolve, reject) {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = text;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+          resolve();
+        } catch (err) { reject(err); }
+      });
+    }
+
+    mailLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        // Pull the bare address out of the mailto: href (drop ?subject=… etc.)
+        const addr = (link.getAttribute('href') || '')
+          .replace(/^mailto:/i, '')
+          .split('?')[0];
+        if (!addr) return;
+        // Don't preventDefault — let the mail app open for those who have one.
+        copyText(addr)
+          .then(function () { showToast('Email copied: ' + addr); })
+          .catch(function () { showToast('Email: ' + addr); });
+      });
+    });
+  }
+
 })();
