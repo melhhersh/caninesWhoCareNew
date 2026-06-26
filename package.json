@@ -1,0 +1,24 @@
+{
+  "name": "canineswhocare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --project=desktop",
+    "test:mobile": "playwright test --project=mobile",
+    "test:headed": "playwright test --project=desktop --headed",
+    "test:screenshots": "playwright test --project=desktop -g 'screenshot'",
+    "test:styles": "playwright test --project=desktop -g 'computed styles'",
+    "test:report": "playwright test --project=desktop -g 'generate HTML'",
+    "serve": "serve . --listen 3333",
+    "open-report": "open tests/reports/comparison-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "serve": "^14.2.6"
+  }
+}

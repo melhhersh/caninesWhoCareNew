@@ -1,0 +1,1080 @@
+/* ============================================================
+   CANINES WHO CARE — Global Stylesheet
+   Pixel-matched to live Wix site measurements (workflow audit).
+   ============================================================ */
+
+@import url('../fonts/fonts.css');
+
+/* ── Design Tokens ────────────────────────────────────────── */
+:root {
+  --color-bg:          #FDF9F2;   /* cream — site-wide base rgb(253,249,242) */
+  --color-bg-mauve:    #ECE3E8;   /* rgb(236,227,232) — about/contact/sponsor */
+  --color-heading:     #551A8C;   /* rgb(85,26,140) purple */
+  --color-text:        #2B2B2B;   /* rgb(43,43,43) charcoal */
+  --color-text-muted:  #7B7B7B;
+  --color-primary:     #11C0E0;   /* rgb(17,192,224) cyan-teal */
+  --color-primary-dark:#0da3bf;
+  --color-border:      #E8E2D6;
+  --color-medium-purple: #9068B0; /* rgb(144,104,176) — sponsor body text */
+
+  --font-heading: 'gazpacho', Georgia, serif;
+  --font-body:    'madefor-text', 'Helvetica Neue', Arial, sans-serif;
+
+  --max-width:  1324px;
+  --nav-height: 148px;
+  --shadow-sm:  0 2px 8px rgba(0,0,0,.06);
+  --shadow-md:  0 4px 20px rgba(0,0,0,.10);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,.14);
+  --transition: 0.22s ease;
+}
+
+/* ── Reset ────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 20.25px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; }
+
+/* ── Typography — exact Wix sizes ────────────────────────── */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  line-height: 1.15;
+}
+h1 { font-size: 81px;    font-weight: 700; line-height: 81px; }
+h2 { font-size: 58.5px;  font-weight: 700; }
+h3 { font-size: 47.25px; font-weight: 700; }
+h4 { font-size: 27px;    font-weight: 700; }
+h5 { font-family: var(--font-body); font-size: 18px; font-weight: 700; color: var(--color-heading); }
+p  { margin-bottom: 1rem; font-size: 20.25px; color: var(--color-text); line-height: 1.6; }
+p:last-child { margin-bottom: 0; }
+
+/* ── Layout ───────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+/* Wix sections have 0 section padding — spacing comes from inner content */
+.section        { padding: 60px 0; }
+.section--cream { background: var(--color-bg); }
+.section--white { background: var(--color-bg); }  /* treat as cream to match Wix */
+.section--mauve { background: var(--color-bg-mauve); }
+.section--lavender { background: rgb(220, 217, 255); }  /* home Support Our Cause band */
+.text-center    { text-align: center; }
+.text-center .section__subtext { margin-left: auto; margin-right: auto; }
+
+.section__eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.section__subtext {
+  font-size: 20.25px;
+  color: var(--color-text);
+  max-width: 840px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ── Buttons — Wix pill: 13.5px 27px, radius 112.5px ─────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13.5px 27px;
+  border-radius: 112.5px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition), box-shadow var(--transition),
+              transform var(--transition);
+  white-space: nowrap;
+  line-height: 1;
+}
+.btn:hover  { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translateY(0); }
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #FDF9F2;
+  border-color: var(--color-primary);
+}
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+.btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn--outline:hover { background: var(--color-primary); color: #fff; }
+.btn--outline-purple {
+  background: transparent;
+  color: var(--color-heading);
+  border-color: var(--color-heading);
+}
+.btn--outline-purple:hover { background: var(--color-heading); color: #fff; }
+/* Wix lg buttons: 18px 54px, radius 27px */
+.btn--lg { padding: 18px 54px; font-size: 20.25px; border-radius: 27px; }
+
+.btn-group { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+
+/* ── Skip link ────────────────────────────────────────────── */
+.skip-link {
+  position: absolute; top: -100px; left: 0;
+  background: var(--color-primary); color: #fff;
+  padding: 10px 20px; z-index: 9999; font-weight: 700;
+  transition: top .2s;
+}
+.skip-link:focus { top: 0; }
+
+/* ── Navigation — 148px tall ──────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-height);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-primary);
+  z-index: 1000;
+  transition: box-shadow var(--transition);
+}
+.nav.scrolled { box-shadow: var(--shadow-sm); }
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+/* Logo — 117×117px image only (Wix: no text wordmark) */
+.nav__logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.nav__logo-icon {
+  width: 117px;
+  height: 117px;
+  flex-shrink: 0;
+}
+.nav__logo-icon img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* Wix nav shows logo image only — wordmark text removed from markup */
+
+/* Nav links — 20.25px cyan, positioned right-of-center (Wix layout) */
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  position: absolute;
+  left: 63%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.nav__link {
+  padding: 10px 16px;
+  font-family: var(--font-body);
+  font-size: 20.25px;
+  font-weight: 400;
+  color: var(--color-primary);
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+.nav__link:hover  { color: var(--color-primary-dark); }
+.nav__link.active { color: var(--color-primary-dark); text-decoration: underline; text-underline-offset: 6px; }
+/* Donate Now CTA — far right, pulled out of the centered menu */
+.nav__cta { font-size: 18px; padding: 13.5px 27px; border-radius: 112.5px; margin-left: auto; }
+
+/* Mobile hamburger */
+.nav__hamburger {
+  display: none; flex-direction: column; gap: 6px;
+  background: none; border: none; cursor: pointer; padding: 8px;
+}
+.nav__hamburger span {
+  display: block; width: 26px; height: 2px;
+  background: var(--color-heading); border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+.nav__hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav__hamburger.open span:nth-child(2) { opacity: 0; }
+.nav__hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.page-content { padding-top: var(--nav-height); }
+
+/* ── HOME: Hero — single column centered ──────────────────── */
+.hero--centered {
+  background: var(--color-bg);
+  padding: 60px 0 80px;
+  text-align: center;
+}
+.hero--centered .hero__title {
+  font-size: 81px;
+  line-height: 81px;
+  color: rgb(84, 26, 140);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.hero--centered .hero__subtitle {
+  font-size: 31.5px;
+  line-height: 1.15;
+  color: rgb(84, 26, 140);
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+.hero--centered .hero__body {
+  font-size: 20.25px;
+  color: var(--color-text);
+  max-width: 760px;
+  margin: 0 auto 14px;
+  line-height: 1.6;
+}
+.hero__photo {
+  width: 874px;
+  max-width: 100%;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 22.5px;
+  background: #e8e2f5;
+}
+.hero__photo img { width: 100%; height: 530px; object-fit: cover; display: block; }
+.hero__photo-placeholder {
+  width: 100%; height: 530px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #e8e2f5, #d8d3ff);
+}
+
+/* ── Two-column split section ─────────────────────────────── */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 96px;
+  align-items: center;
+}
+/* image on left */
+.split-section--img-left .split-section__photo { order: -1; }
+/* About intro: Wix image is ~498×596 (narrower left col), text wider on right */
+.split-section--img-left { grid-template-columns: 498px 1fr; gap: 96px; align-items: center; }
+.split-section--img-left .split-section__photo { aspect-ratio: 498 / 596; }
+.split-section--img-left .split-section__photo img { height: 100%; }
+.split-section--img-left p { line-height: 1.45; }
+
+/* Wix: 22.5px rounded corners on content images */
+.split-section__photo {
+  overflow: hidden;
+  border-radius: 22.5px;
+  background: #e8e2f5;
+}
+.split-section__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.split-section__photo-placeholder {
+  width: 100%; aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #e8e2f5, #d8d3ff);
+}
+
+/* ── HOME Support Our Cause ───────────────────────────────── */
+.support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 470px) 540px;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: start;
+}
+.support-text h2  { color: var(--color-heading); margin-bottom: 20px; font-size: 63px; }
+/* Wix: body text in support section is PURPLE */
+.support-text p   { color: var(--color-heading); font-size: 20.25px; line-height: 1.6; margin-bottom: 14px; }
+/* Wix: 'Contact us to become a sponsor!' is 27px; email is 20.25px purple — override the 63px h2 rule */
+.support-text h2.sponsor-heading { font-size: 27px; margin-top: 28px; margin-bottom: 4px; color: var(--color-heading); }
+.support-text h2.sponsor-email   { font-size: 20.25px; font-weight: 400; margin-bottom: 0; }
+.sponsor-email a  { color: var(--color-heading); font-weight: 400; }
+.sponsor-email a:hover { text-decoration: underline; }
+
+/* Donate card — white outer shell with cream inner panel (Wix) */
+.donate-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow-md);
+}
+.donate-card h3 { color: var(--color-heading); margin-bottom: 20px; font-size: 27px; }
+/* Donate-card form labels — Wix: 14px purple, regular weight */
+.donate-card label { font-size: 14px; color: var(--color-heading); font-weight: 400; }
+.amount-label { font-size: 14px; font-weight: 400; color: var(--color-heading); margin-bottom: 8px; }
+.donate-card .form-submit { font-size: 16px; border-radius: 100px; }
+
+/* Amount buttons — Wix: radius 100px */
+.amount-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.amount-btn {
+  padding: 12px 6px;
+  border: 2px solid var(--color-border);
+  border-radius: 100px;
+  background: var(--color-bg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  cursor: pointer;
+  text-align: center;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+}
+.amount-btn:hover  { border-color: var(--color-primary); color: var(--color-primary); }
+.amount-btn.active { border-color: var(--color-primary); background: var(--color-primary); color: #fff; }
+
+/* ── Forms ────────────────────────────────────────────────── */
+.form-group { margin-bottom: 16px; }
+.form-row   { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.req { color: var(--color-heading); }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+label {
+  display: block; font-size: 15px; font-weight: 700;
+  color: var(--color-text); margin-bottom: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-text);
+  background: #fff;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: none; -webkit-appearance: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(17,192,224,.15);
+}
+textarea { min-height: 120px; resize: vertical; }
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237B7B7B' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}
+
+.form-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+}
+.form-card h3 { color: var(--color-heading); margin-bottom: 8px; font-size: 27px; }
+.form-card__sub { font-size: 18px; color: var(--color-text-muted); margin-bottom: 28px; }
+.form-submit { width: 100%; justify-content: center; margin-top: 8px; }
+
+.form-success {
+  display: none; padding: 14px;
+  background: #e6faf2; border: 1px solid #34d399; border-radius: 8px;
+  text-align: center; color: #065f46; font-weight: 700; font-size: 16px; margin-top: 12px;
+}
+.secure-badge {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 15px; color: var(--color-text-muted);
+  margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border);
+}
+.secure-heading {
+  font-size: 18px; color: var(--color-heading);
+  font-family: var(--font-heading); font-weight: 700; margin: 0 0 2px;
+}
+
+/* ── ABOUT: Purpose list — Wix: simple disc bullets, no dividers ──── */
+.purpose-list { list-style: disc; padding-left: 22px; margin-top: 4px; }
+.purpose-list li {
+  padding: 3px 0;
+  font-size: 18px; color: var(--color-text); line-height: 1.45;
+}
+.purpose-list li::marker { color: var(--color-text); }
+
+
+/* ── ABOUT: Serving Central Texas — purple bullet list in bordered card ── */
+.area-list {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  width: fit-content;
+  margin: 24px auto 0;
+  border: 1px solid var(--color-primary);
+  border-radius: 24px;
+  padding: 26px 56px;
+}
+.area-list__col { list-style: disc; padding-left: 20px; }
+.area-list__col li {
+  font-size: 20.25px;
+  color: var(--color-heading);
+  line-height: 1.35;
+  padding: 1px 0;
+}
+.area-list__col li::marker { color: var(--color-heading); }
+
+/* ── ABOUT: Purpose + Values 2-col layout — Wix: teal-bordered cards ── */
+.purpose-values-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.purpose-col, .values-col {
+  border: 1px solid var(--color-primary);
+  border-radius: 24px;
+  padding: 22px 30px;
+  background: var(--color-bg);
+}
+.purpose-col h2, .values-col h2 {
+  font-size: 36px;
+  color: var(--color-text);  /* Wix: dark not purple */
+  margin-bottom: 4px;
+}
+
+/* Values — Wix: plain text list, no cards */
+/* Wix: Core Values is a disc-bulleted list, tight rhythm, dark bold labels */
+.values-list { list-style: disc; padding-left: 22px; margin-top: 4px; }
+.values-list__item { font-size: 18px; color: var(--color-text); line-height: 1.45; padding: 3px 0; }
+.values-list__item::marker { color: var(--color-text); }
+.values-list__item strong { color: var(--color-text); }
+
+/* ── Service area pills ───────────────────────────────────── */
+.area-pills { display: flex; flex-wrap: wrap; gap: 12px; }
+.area-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 20px;
+  background: #fff; border: 1.5px solid var(--color-border);
+  border-radius: 112.5px; font-size: 18px; font-weight: 700;
+  color: var(--color-heading);
+}
+
+/* ── TEAM-MEMBERS: 3 portrait photos (342×450) ────────────── */
+.team-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 65px;
+  max-width: 1156px;       /* 342*3 + 65*2 → matches live photo size */
+  margin: 0 auto 44px;
+}
+.team-photo { aspect-ratio: 342/450; overflow: hidden; border-radius: 22.5px; background: #e8e2f5; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Filter buttons BELOW photos — one centered under each photo (Wix) */
+.team-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 65px;
+  max-width: 1156px;
+  margin: 0 auto;
+  justify-items: center;
+}
+.team-tab {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 13.5px 36px; border: 2px solid var(--color-primary);
+  border-radius: 112.5px; background: var(--color-primary);
+  font-family: var(--font-body); font-size: 18px; font-weight: 400;
+  color: #fff; cursor: pointer; text-decoration: none;
+  transition: opacity var(--transition), transform var(--transition);
+}
+.team-tab:hover { opacity: .9; transform: translateY(-1px); }
+
+/* Join section — Wix: 63px heading, 2-col bordered cards */
+.join-heading { font-size: 63px; color: var(--color-heading); margin-bottom: 36px; }
+.join-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.join-card {
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 24px 30px;
+}
+.join-card .join-subheading {
+  font-family: var(--font-heading);
+  font-size: 27px; font-weight: 700;
+  letter-spacing: 0; text-transform: none;
+  color: var(--color-text); margin: 0 0 10px;
+}
+.join-sub { font-size: 15.75px; color: var(--color-text); margin-bottom: 8px; }
+/* Wix: each item is a bulleted line */
+.join-item {
+  font-size: 18px; color: var(--color-text); line-height: 1.4; margin-bottom: 7px;
+  position: relative; padding-left: 20px;
+}
+.join-item::before {
+  content: '\2022'; position: absolute; left: 4px; top: 0;
+  color: var(--color-text); font-weight: 700;
+}
+.join-greet {
+  font-size: 20.25px; color: var(--color-text);
+  max-width: 1100px; margin: 40px auto 0;
+}
+
+/* Start Your Journey — transparent form, centered, gray labels */
+.journey-form { max-width: 760px; margin: 0 auto; }
+.journey-form label { font-size: 14px; color: var(--color-text-muted); font-weight: 400; }
+.journey-form .form-submit { font-size: 16px; border-radius: 100px; }
+
+/* ── TEAM-MEMBERS: Portrait cards (342×450, no circle, no card chrome) ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+.team-card { text-align: center; }
+.team-card__photo-wrap {
+  width: 100%;
+  aspect-ratio: 342/450;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background: #e8e2f5;
+}
+.team-card__photo {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  border-radius: 0;   /* Wix: 0px */
+}
+.team-card__photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #e8e2f5, #c8c0ff);
+}
+.team-card__body    { padding: 0; }
+.team-card__handler { font-size: 20px; color: var(--color-heading); margin-bottom: 4px; }
+.team-card__dog     { font-size: 16px; font-weight: 700; color: var(--color-primary); margin-bottom: 10px; }
+.team-card__bio     { font-size: 18px; color: var(--color-text); line-height: 1.6; margin: 0; }
+
+/* ── Join section ─────────────────────────────────────────── */
+.join-subheading {
+  font-family: var(--font-body); font-size: 16px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--color-heading); margin: 24px 0 12px;
+}
+.join-list { display: flex; flex-direction: column; gap: 8px; padding: 0; list-style: none; }
+.join-list li {
+  font-size: 18px; color: var(--color-text);
+  padding-left: 20px; position: relative; line-height: 1.6;
+}
+.join-list li::before { content: '•'; position: absolute; left: 0; color: var(--color-primary); font-weight: 700; }
+
+/* ── GALLERY PAGES (Active Teams / Retired Teams / Memorial) ── */
+.gallery-heading {
+  font-size: 54px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: 36px;
+}
+/* Wix: 3-col, 406×406 square photos, 60px gap, 22.5px radius.
+   Grid is 1338px — wider than the 1260px content area — so cancel the
+   container's 32px side padding to land exact 406px tiles. */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin: 0 -39px;          /* widen by 78px (1260 → 1338) */
+}
+@media (max-width: 1380px) { .gallery-grid { margin: 0; } }
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 22.5px;
+  background: #e8e2f5;
+  cursor: pointer;
+}
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform .4s ease;
+}
+.gallery-item:hover img { transform: scale(1.04); }
+
+/* Hover overlay — dark scrim + white title/description (Wix Pro Gallery) */
+.gallery-item__overlay {
+  position: absolute; inset: 0;
+  padding: 0;
+  background: rgba(43, 26, 60, 0.72);
+  color: #fff;
+  display: flex; flex-direction: column;
+  opacity: 0;
+  transition: opacity .35s ease;
+  overflow: hidden;
+}
+.gallery-item:hover .gallery-item__overlay,
+.gallery-item:focus-within .gallery-item__overlay { opacity: 1; }
+/* Wix: title block has 31.5px padding all round; description sits flush below (no top padding) */
+.gallery-item__title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22.5px; font-weight: 400; line-height: 27px; color: #fff;
+  padding: 31.5px;
+  margin: 0;
+}
+.gallery-item__desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.5px; line-height: 18.9px; font-weight: 400; color: #fff;
+  padding: 0 31.5px 31.5px;
+  margin: 0;
+}
+@media (max-width: 1100px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+/* ── ACTIVE TEAMS: Square cards with image overlay ────────── */
+.section__eyebrow-h4 {
+  font-size: 54px;
+  font-weight: 400;         /* Wix: 400 not bold */
+  font-family: Arial, Helvetica, sans-serif;  /* Wix uses Arial here */
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Wix: 3-col, ~406px square cards, 60px gap, 22.5px border-radius, text OVERLAY */
+.active-teams-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  max-width: 1337px;
+  margin: 0 auto;
+}
+.active-team-card {
+  border-radius: 22.5px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #2b2b2b;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.active-team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+.active-team-card__photo {
+  position: absolute; inset: 0;
+}
+.active-team-card__photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.active-team-card:hover .active-team-card__photo img { transform: scale(1.04); }
+
+/* Dark overlay */
+.active-team-card__overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+/* Text overlay — top-left positioned */
+.active-team-card__body {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 31.5px;
+  z-index: 2;
+}
+.active-team-card__name {
+  font-size: 22.5px;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif; /* Wix uses Arial */
+  color: #fff;
+  margin-bottom: 4px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+.active-team-card__breed {
+  font-size: 13.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  opacity: .9;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+
+/* ── CONTACT: Hero — Wix: centered ────────────────────────── */
+.contact-hero {
+  background: var(--color-bg);
+  padding: 80px 60px 64px;
+  text-align: center;
+}
+.contact-hero h1 {
+  font-size: 50.625px;
+  color: var(--color-heading);
+  margin: 0 auto 20px;
+  max-width: 950px;
+  line-height: 1.2;
+}
+.contact-hero p {
+  font-size: 20.25px;
+  color: var(--color-text);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Services 3-col grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  margin-top: 40px;
+}
+.service-card { text-align: left; padding: 0; }
+.service-card__photo {
+  overflow: hidden;
+  aspect-ratio: 409/397;
+  border-radius: 22.5px;
+  background: #e8e2f5;
+  margin-bottom: 20px;
+}
+.service-card__photo img { width: 100%; height: 100%; object-fit: cover; }
+.service-card__photo-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center; font-size: 3rem;
+}
+/* Wix: h2 for section heading is CYAN; card headings are h5 */
+.services-heading {
+  font-size: 54px;
+  color: var(--color-primary);   /* Wix: CYAN not purple */
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.service-card h5 { font-family: var(--font-heading); font-size: 27px; font-weight: 700; color: var(--color-text); margin-bottom: 10px; }
+.service-card p  { font-size: 18px; color: var(--color-text); line-height: 1.65; margin: 0; }
+
+/* Ticker — Wix: 36px gazpacho CYAN text on cream bg (NOT purple band) */
+.ticker-wrap {
+  overflow: hidden;
+  background: var(--color-bg);    /* cream background like Wix */
+  padding: 24px 0;
+  white-space: nowrap;
+}
+.ticker {
+  display: inline-flex;
+  gap: 48px;
+  animation: ticker 28s linear infinite;
+  will-change: transform;
+}
+.ticker span {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-primary);    /* CYAN on cream */
+  text-transform: uppercase;
+}
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Contact form layout — Wix: form column wider, intro vertically centered */
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+/* Get in Touch heading — Wix: 63px */
+.contact-form-intro h2 { font-size: 63px; color: var(--color-heading); }
+.contact-email-display { font-size: 20.25px; font-weight: 700; margin-top: 10px; }
+.contact-email-display a { color: var(--color-heading); }
+.contact-email-display a:hover { text-decoration: underline; }
+
+/* Wix contact form section: body text is PURPLE */
+.contact-form-intro p { color: var(--color-heading); font-size: 20.25px; }
+/* Contact form labels — Wix: 14px purple, regular weight */
+.contact-layout label { font-size: 14px; color: var(--color-heading); font-weight: 400; }
+.contact-layout .form-submit { font-size: 16px; border-radius: 100px; }
+/* Contact inputs on mauve section — Wix: cream fill, faint purple border */
+.contact-layout input,
+.contact-layout select,
+.contact-layout textarea {
+  background: var(--color-bg);
+  border-color: rgba(85,26,140,.18);
+}
+
+/* Board of Directors — Wix: 2-column grid, 27px purple, cyan paw icon before each name */
+.board-list {
+  list-style: none; max-width: 980px; margin: 28px auto 0;
+  display: grid; grid-template-columns: 1fr 1fr;
+  column-gap: 48px; row-gap: 22px;
+  justify-items: start;
+}
+.board-list li {
+  font-size: 27px; font-weight: 400; color: var(--color-heading);
+  display: flex; align-items: center; gap: 16px; text-align: left;
+}
+.board-list li::before {
+  content: ''; flex-shrink: 0;
+  width: 34px; height: 34px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' fill='none' stroke='%2311C0E0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='14' cy='25' rx='4.5' ry='7' transform='rotate(-22 14 25)'/%3E%3Cellipse cx='25' cy='16' rx='4.5' ry='7.5' transform='rotate(-8 25 16)'/%3E%3Cellipse cx='39' cy='16' rx='4.5' ry='7.5' transform='rotate(8 39 16)'/%3E%3Cellipse cx='50' cy='25' rx='4.5' ry='7' transform='rotate(22 50 25)'/%3E%3Cpath d='M32 31c-8.5 0-15.5 6-15.5 13 0 4.2 2.7 7 6.3 7 2.7 0 4.4-1.7 9.2-1.7s6.5 1.7 9.2 1.7c3.6 0 6.3-2.8 6.3-7C47.5 37 40.5 31 32 31z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+/* odd count: last item spans both columns, centered */
+.board-list li:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; }
+
+/* ── DONATE page — Wix: 2-col, white form card on the right ── */
+.donate-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+  max-width: var(--max-width);
+}
+.donate-intro { padding-top: 12px; }
+/* h2 on donate = 36px, left-aligned */
+.donate-h2 { font-size: 36px; margin-bottom: 20px; }
+/* Body text in donate section is CYAN on Wix */
+.donate-body-text { font-size: 18px; color: var(--color-primary); margin-bottom: 14px; }
+
+/* Donation card (right column) — Wix: cream panel, subtle border */
+.donate-card--page {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: var(--shadow-sm);
+}
+/* h1 "Support Our Mission" = 24px on Wix */
+.donate-mission-title { font-size: 24px; color: var(--color-heading); margin-bottom: 6px; font-family: var(--font-heading); }
+.donate-card--page .donate-card__sub { font-size: 16px; color: var(--color-heading); margin-bottom: 20px; }
+.donate-card--page label { font-size: 14px; color: var(--color-heading); font-weight: 400; }
+.donate-card--page .amount-label { margin-top: 4px; font-weight: 400; }
+.amount-grid--5 { grid-template-columns: repeat(3, 1fr); }
+/* Amount buttons inside card — Wix: pale-cyan tinted active, dark text */
+.donate-card--page .amount-btn { background: #fff; color: var(--color-heading); border-color: var(--color-border); }
+.donate-card--page .amount-btn.active {
+  background: rgba(17,192,224,.12); color: var(--color-heading); border-color: var(--color-primary);
+}
+/* Secure badge inside card — Wix: purple text, before button */
+.donate-card--page .secure-badge {
+  border-top: none; padding-top: 4px; margin-top: 4px;
+  flex-direction: column; align-items: flex-start; gap: 2px;
+}
+.donate-card--page .secure-sub { font-size: 16px; color: var(--color-heading); }
+/* Donate button — Wix: radius 24px, 16px font, full card width, last element */
+.btn--donate {
+  border-radius: 24px;
+  font-size: 16px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* ── Payment options (PayPal / Venmo / Zelle) ── */
+.pay-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.pay-btn {
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  width: 100%;
+  padding: 14px 18px;
+  border: none; border-radius: 24px;
+  font-family: var(--font-body); font-size: 16px; font-weight: 700;
+  color: #fff; cursor: pointer;
+  transition: filter var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.pay-btn:hover  { filter: brightness(1.06); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.pay-btn:active { transform: translateY(0); }
+.pay-btn__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(255,255,255,.22); font-size: 13px; font-weight: 800; flex-shrink: 0;
+}
+.pay-btn--paypal { background: #003087; }
+.pay-btn--venmo  { background: #008CFF; }
+.pay-btn--zelle  { background: #6D1ED4; }
+
+/* Zelle instructions panel */
+.zelle-info {
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  background: rgba(17,192,224,.06);
+}
+.zelle-info__lead   { font-size: 15px; color: var(--color-text); margin: 0 0 4px; }
+.zelle-info__handle { font-size: 18px; color: var(--color-heading); margin: 0 0 8px; word-break: break-all; }
+.zelle-info__note   { font-size: 14px; color: var(--color-text-muted); line-height: 1.5; margin: 0; }
+
+/* Sponsor section — centered head, then photo-left / CTA-right */
+.sponsor-head { max-width: 1000px; margin: 0 auto 40px; }
+.sponsor-head h2 { font-size: 58.5px; color: var(--color-heading); margin-bottom: 16px; white-space: nowrap; }
+.sponsor-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.sponsor-photo {
+  overflow: hidden;
+  border-radius: 22.5px;
+  background: #e8e2f5;
+}
+.sponsor-photo img { width: 100%; height: 489px; object-fit: cover; display: block; }
+/* Sponsor body text — Wix: medium purple rgb(144,104,176) */
+.sponsor-body { font-size: 20.25px; color: var(--color-medium-purple); }
+.sponsor-cta h4 { font-size: 31.5px; color: var(--color-heading); }
+
+/* ── Social links — brand badges (footer top-right) ──── */
+.social-links { display: flex; gap: 12px; }
+.social-link {
+  width: 30px; height: 30px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; overflow: hidden;
+  transition: transform var(--transition), opacity var(--transition);
+}
+.social-link svg { width: 16px; height: 16px; display: block; fill: currentColor; }
+.social-link:hover { transform: translateY(-2px); opacity: .92; }
+.social-link--fb { background: #1877F2; border-radius: 50%; }
+.social-link--ig {
+  border-radius: 8px;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* ── Footer — Wix: cream bg, logo+tagline, divider, contact/copyright row ── */
+.footer {
+  background: var(--color-bg);
+  padding: 40px 0 32px;
+}
+.footer__logo { width: 119px; height: 119px; margin-bottom: 16px; }
+.footer__logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.footer__tagline {
+  font-family: var(--font-heading); font-style: normal;
+  font-size: 20.25px; font-weight: 700; color: var(--color-text);
+  margin-bottom: 0;
+}
+/* Full-width purple divider between tagline and contact row */
+.footer__divider {
+  border: none; border-top: 1px solid var(--color-heading);
+  margin: 22px 0 20px;
+}
+/* Lower row: contact left, social+copyright right */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.footer__contact-link {
+  display: inline-block; font-size: 15.75px; color: var(--color-text);
+  margin-bottom: 12px; transition: color var(--transition);
+}
+.footer__contact-link:hover { color: var(--color-primary); }
+.footer__address { font-size: 18px; color: var(--color-text); line-height: 1.5; }
+.footer__address a { color: var(--color-text); }
+.footer__address a:hover { color: var(--color-primary); }
+.footer__right { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; }
+.footer__copyright { font-size: 15.75px; color: var(--color-text); }
+
+/* ── Lightbox ─────────────────────────────────────────────── */
+.lightbox {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,.88); z-index: 9999;
+  align-items: center; justify-content: center;
+}
+.lightbox.open { display: flex; }
+.lightbox__content { position: relative; }
+.lightbox__img { max-width: 90vw; max-height: 88vh; object-fit: contain; }
+.lightbox__close {
+  position: absolute; top: -44px; right: 0;
+  background: none; border: none; color: #fff; font-size: 2.4rem;
+  cursor: pointer; line-height: 1; padding: 6px;
+}
+
+/* ── Fade-in ──────────────────────────────────────────────── */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .active-teams-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .split-section     { gap: 48px; }
+  .support-grid      { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .split-section       { grid-template-columns: 1fr; gap: 36px; }
+  .purpose-values-split{ grid-template-columns: 1fr; }
+  .contact-layout      { grid-template-columns: 1fr; }
+  .sponsor-split       { grid-template-columns: 1fr; }
+  .services-grid       { grid-template-columns: 1fr; }
+  .footer__grid        { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  :root { --nav-height: 80px; }
+  body, p  { font-size: 18px; }
+  h1 { font-size: clamp(2rem, 8vw, 48px); line-height: 1.15; }
+  h2 { font-size: clamp(1.6rem, 6vw, 36px); }
+  h3 { font-size: clamp(1.3rem, 5vw, 28px); }
+  .container { padding: 0 24px; }
+  .section   { padding: 56px 0; }
+  .hero--centered { padding: 40px 0 60px; }
+  .hero__photo    { width: 100%; }
+  .hero__photo img { height: auto; }
+  .hero--centered .hero__title { font-size: clamp(2.2rem, 8vw, 48px); line-height: 1.15; }
+  .nav__menu {
+    display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
+    transform: none;
+    background: var(--color-bg); flex-direction: column;
+    padding: 16px 24px 24px; border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md); gap: 4px;
+  }
+  .nav__menu.open { display: flex; }
+  .nav__cta       { display: none; }
+  .nav__hamburger { display: flex; }
+  .nav__link      { font-size: 18px; }
+  .team-grid      { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .form-row       { grid-template-columns: 1fr; }
+  .footer__grid   { grid-template-columns: 1fr; gap: 28px; }
+  .footer__bottom { flex-direction: column; text-align: center; }
+  .amount-grid    { grid-template-columns: repeat(3, 1fr); }
+  .btn-group      { flex-direction: column; align-items: stretch; }
+  .btn-group .btn { justify-content: center; }
+  .active-teams-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .contact-hero   { padding: 56px 24px 40px; }
+  .contact-hero h1 { font-size: clamp(1.6rem, 5vw, 32px); }
+  .team-tabs      { justify-content: center; }
+  .donate-layout  { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .active-teams-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .amount-grid       { grid-template-columns: repeat(2, 1fr); }
+}

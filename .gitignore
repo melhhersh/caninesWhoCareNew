@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Dev tooling & scratch (measurement scripts, comparison screenshots)
+compare/
+_scratch/
+
+# Test output
+tests/
+test-results/
+playwright-report/
+
+# Editor / OS / tooling
+.claude/
+.DS_Store
+*.log

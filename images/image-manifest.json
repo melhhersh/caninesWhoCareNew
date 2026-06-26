@@ -1,0 +1,229 @@
+{
+  "downloaded": [
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_7a06658117ad434f8e99dd30cab2348e~mv2.png/v1/fill/w_117,h_117,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_7a06658117ad434f8e99dd30cab2348e~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/home/92bc92_7a06658117ad434f8e99dd30cab2348e_mv2.png",
+      "alt": "",
+      "role": "header",
+      "page": "home"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_d96be25e9bf049909d52a63f401c3b11~mv2.png/v1/crop/x_0,y_0,w_1448,h_877/fill/w_874,h_530,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2FAA3AB8-18AF-48A6-B03D-C3D948670446_PNG.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/hero/2FAA3AB8-18AF-48A6-B03D-C3D948670446_PNG.png",
+      "alt": "2FAA3AB8-18AF-48A6-B03D-C3D948670446.PNG",
+      "role": "general",
+      "page": "home"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_311de608e9b3417da5eef68cd4b2b6f3~mv2.jpg/v1/fill/w_543,h_563,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_311de608e9b3417da5eef68cd4b2b6f3~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/home/92bc92_311de608e9b3417da5eef68cd4b2b6f3_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "home"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_7a06658117ad434f8e99dd30cab2348e~mv2.png/v1/fill/w_119,h_119,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/CaninesWhoCare_color.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/footer/CaninesWhoCare_color.png",
+      "alt": "CaninesWhoCare_color.png",
+      "role": "footer",
+      "page": "home"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_314ae67fce334667a3190416ff517336~mv2.jpg/v1/fill/w_498,h_596,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_314ae67fce334667a3190416ff517336~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/about/92bc92_314ae67fce334667a3190416ff517336_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "about-us"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_20a62f8a11364591b7ffcd21fe7a7c12~mv2.jpg/v1/fill/w_342,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/9f216c_20a62f8a11364591b7ffcd21fe7a7c12~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/team/9f216c_20a62f8a11364591b7ffcd21fe7a7c12_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "team-members"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_9dfa1528944645a6a2a49e5a51587785~mv2.png/v1/fill/w_339,h_450,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_9dfa1528944645a6a2a49e5a51587785~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/team/92bc92_9dfa1528944645a6a2a49e5a51587785_mv2.png",
+      "alt": "",
+      "role": "general",
+      "page": "team-members"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_f5ca49e19a6c4f84ad76736a02c9b29c~mv2.png/v1/crop/x_24,y_0,w_681,h_850/fill/w_340,h_450,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_f5ca49e19a6c4f84ad76736a02c9b29c~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/team/92bc92_f5ca49e19a6c4f84ad76736a02c9b29c_mv2.png",
+      "alt": "",
+      "role": "general",
+      "page": "team-members"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_e20973f5dca2491987b0597be156913c~mv2.jpg/v1/fill/w_1000,h_1355,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_e20973f5dca2491987b0597be156913c~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_e20973f5dca2491987b0597be156913c_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_6f9b845de6a04f13857fb7a6d42f59be~mv2.png/v1/fill/w_1000,h_1169,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_6f9b845de6a04f13857fb7a6d42f59be~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_6f9b845de6a04f13857fb7a6d42f59be_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_20a62f8a11364591b7ffcd21fe7a7c12~mv2.jpg/v1/fill/w_1000,h_1332,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_20a62f8a11364591b7ffcd21fe7a7c12~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_20a62f8a11364591b7ffcd21fe7a7c12_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_88d201e214364067b766d7095fd8dc5d~mv2.jpg/v1/fill/w_1000,h_1500,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_88d201e214364067b766d7095fd8dc5d~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_88d201e214364067b766d7095fd8dc5d_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_1eb403206769450eab2277509b9def6d~mv2.jpg/v1/fill/w_1000,h_1500,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_1eb403206769450eab2277509b9def6d~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_1eb403206769450eab2277509b9def6d_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_6dd1fd37adae4b369a34947ca9ccf37b~mv2.jpg/v1/fill/w_1000,h_1500,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_6dd1fd37adae4b369a34947ca9ccf37b~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_6dd1fd37adae4b369a34947ca9ccf37b_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_3495d7e68504459f89278c96ac4dddf8~mv2.png/v1/fill/w_978,h_1136,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_3495d7e68504459f89278c96ac4dddf8~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_3495d7e68504459f89278c96ac4dddf8_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_b3c176f207434d75bb1fcc58ccccc500~mv2.jpg/v1/fill/w_848,h_892,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_b3c176f207434d75bb1fcc58ccccc500~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_b3c176f207434d75bb1fcc58ccccc500_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_185ba3d60c4b48f2b1eed70b47f131f2~mv2.png/v1/fill/w_1000,h_989,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_185ba3d60c4b48f2b1eed70b47f131f2~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_185ba3d60c4b48f2b1eed70b47f131f2_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_826e6c4cab714df9bc09f22dbc7dbb2a~mv2.png/v1/fill/w_1000,h_1060,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_826e6c4cab714df9bc09f22dbc7dbb2a~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_826e6c4cab714df9bc09f22dbc7dbb2a_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_3a0d245296b7404488ff65782be3c17e~mv2.png/v1/fill/w_854,h_926,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_3a0d245296b7404488ff65782be3c17e~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_3a0d245296b7404488ff65782be3c17e_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/9f216c_8b6f28e756474118ae99b37238f0d028~mv2.jpg/v1/fill/w_1000,h_1500,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9f216c_8b6f28e756474118ae99b37238f0d028~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/9f216c_8b6f28e756474118ae99b37238f0d028_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_e32772c087324998b17d6d24b2060459~mv2.png/v1/fill/w_846,h_930,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_e32772c087324998b17d6d24b2060459~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_e32772c087324998b17d6d24b2060459_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_ec24830a21974620aa611658ca175866~mv2.jpg/v1/fill/w_1000,h_1333,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_ec24830a21974620aa611658ca175866~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_ec24830a21974620aa611658ca175866_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_85770e587647434896ff145fc48235f8~mv2.png/v1/fill/w_1000,h_1056,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_85770e587647434896ff145fc48235f8~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_85770e587647434896ff145fc48235f8_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_ddd65334542e4b08af492cb152f53b90~mv2.jpg/v1/fill/w_785,h_932,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_ddd65334542e4b08af492cb152f53b90~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_ddd65334542e4b08af492cb152f53b90_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_9162d16f41824636bf95e72d0c8e9312~mv2.png/v1/fill/w_946,h_1030,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_9162d16f41824636bf95e72d0c8e9312~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_9162d16f41824636bf95e72d0c8e9312_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_dcfe1ab8c8f94e6bba98d3b88753c8ab~mv2.png/v1/fill/w_1000,h_1056,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_dcfe1ab8c8f94e6bba98d3b88753c8ab~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_dcfe1ab8c8f94e6bba98d3b88753c8ab_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_895daf03d12944089f12a6d6424bc782~mv2.jpg/v1/fill/w_1000,h_1336,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_895daf03d12944089f12a6d6424bc782~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_895daf03d12944089f12a6d6424bc782_mv2.jpg",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_a3c473d972dc4bd3b56d3fb452dc93d6~mv2.png/v1/fill/w_624,h_798,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/92bc92_a3c473d972dc4bd3b56d3fb452dc93d6~mv2.png",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/gallery/92bc92_a3c473d972dc4bd3b56d3fb452dc93d6_mv2.png",
+      "alt": "",
+      "role": "gallery",
+      "page": "active-teams"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_c79252f3cc104cf4af23b6c17d695e93~mv2.jpg/v1/fill/w_409,h_397,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_c79252f3cc104cf4af23b6c17d695e93~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/general/92bc92_c79252f3cc104cf4af23b6c17d695e93_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "contact"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_fd21cad7409e48dda185c5d194f20d89~mv2.jpg/v1/crop/x_0,y_418,w_1440,h_1411/fill/w_408,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_fd21cad7409e48dda185c5d194f20d89~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/general/92bc92_fd21cad7409e48dda185c5d194f20d89_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "contact"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_b12bc799777148b7bd7a26dad7a4fd5d~mv2.jpg/v1/crop/x_0,y_3,w_1440,h_1402/fill/w_407,h_396,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_b12bc799777148b7bd7a26dad7a4fd5d~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/general/92bc92_b12bc799777148b7bd7a26dad7a4fd5d_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "contact"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/92bc92_02ef36f8d421472785f0f098f74b43a9~mv2.jpg/v1/crop/x_0,y_457,w_1440,h_1241/fill/w_568,h_489,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/92bc92_02ef36f8d421472785f0f098f74b43a9~mv2.jpg",
+      "dest": "/Users/melanieshoecraft/Development/canineswhocare/images/general/92bc92_02ef36f8d421472785f0f098f74b43a9_mv2.jpg",
+      "alt": "",
+      "role": "general",
+      "page": "donate"
+    }
+  ],
+  "failed": []
+}
