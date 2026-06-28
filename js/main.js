@@ -70,7 +70,12 @@
 
     fadeEls.forEach((el, i) => {
       el.style.transitionDelay = `${(i % 4) * 0.06}s`;
-      io.observe(el);
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible');
+      } else {
+        io.observe(el);
+      }
     });
   } else {
     fadeEls.forEach(el => el.classList.add('visible'));
