@@ -421,6 +421,12 @@ select {
   font-size: 18px; color: var(--color-text); line-height: 1.45;
 }
 .purpose-list li::marker { color: var(--color-text); }
+.purpose-list a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.purpose-list a:hover { color: var(--color-primary-dark); }
 
 
 /* ── ABOUT: Serving Central Texas — purple bullet list in bordered card ── */
@@ -1054,7 +1060,19 @@ select {
   .services-grid       { grid-template-columns: 1fr; }
   .footer__grid        { grid-template-columns: 1fr 1fr; }
   .area-list           { flex-direction: column; gap: 8px; width: auto; padding: 20px 28px; }
+  .nav__menu {
+    display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
+    transform: none;
+    background: var(--color-bg); flex-direction: column;
+    padding: 16px 24px 24px; border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md); gap: 4px;
+  }
+  .nav__menu.open { display: flex; }
+  .nav__cta       { display: none; }
+  .nav__hamburger { display: flex; }
+  .nav__link      { font-size: 18px; }
 }
+
 @media (max-width: 768px) {
   :root { --nav-height: 80px; }
   body, p  { font-size: 18px; }
@@ -1067,17 +1085,6 @@ select {
   .hero__photo    { width: 100%; }
   .hero__photo img { height: auto; }
   .hero--centered .hero__title { font-size: clamp(2.2rem, 8vw, 48px); line-height: 1.15; }
-  .nav__menu {
-    display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
-    transform: none;
-    background: var(--color-bg); flex-direction: column;
-    padding: 16px 24px 24px; border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md); gap: 4px;
-  }
-  .nav__menu.open { display: flex; }
-  .nav__cta       { display: none; }
-  .nav__hamburger { display: flex; }
-  .nav__link      { font-size: 18px; }
   .team-grid      { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
   .form-row       { grid-template-columns: 1fr; }
   .footer__grid   { grid-template-columns: 1fr; gap: 28px; }
