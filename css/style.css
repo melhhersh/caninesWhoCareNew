@@ -1061,7 +1061,7 @@ select {
   .footer__grid        { grid-template-columns: 1fr 1fr; }
   .area-list           { flex-direction: column; gap: 8px; width: auto; padding: 20px 28px; }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .nav__menu {
     display: none; position: absolute; top: var(--nav-height); left: 0; right: 0;
     transform: none;
